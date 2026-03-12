@@ -1,0 +1,210 @@
+MongoDB Zen Class Database Design
+
+Database Name: zen_class
+
+
+
+Collection: users
+Description: Stores student details.
+
+Data:
+
+{
+  "user_id": 1,
+  "name": "Arun",
+  "email": "arun@gmail.com",
+  "mentor_id": 101
+}
+
+{
+  "user_id": 2,
+  "name": "Divya",
+  "email": "divya@gmail.com",
+  "mentor_id": 101
+}
+
+{
+  "user_id": 3,
+  "name": "Karthik",
+  "email": "karthik@gmail.com",
+  "mentor_id": 102
+}
+
+{
+  "user_id": 4,
+  "name": "Meena",
+  "email": "meena@gmail.com",
+  "mentor_id": 102
+}
+
+
+
+Collection: mentors
+Description: Stores mentor information.
+
+Data:
+
+{
+  "mentor_id": 101,
+  "mentor_name": "Rahul",
+  "mentees_count": 20
+}
+
+{
+  "mentor_id": 102,
+  "mentor_name": "Priya",
+  "mentees_count": 12
+}
+
+
+
+Collection: topics
+Description: Stores topics taught in the class.
+
+Data:
+
+{
+  "topic": "HTML",
+  "date": "2020-10-10",
+  "mentor_id": 101
+}
+
+{
+  "topic": "CSS",
+  "date": "2020-10-15",
+  "mentor_id": 101
+}
+
+{
+  "topic": "JavaScript",
+  "date": "2020-10-20",
+  "mentor_id": 102
+}
+
+{
+  "topic": "MongoDB",
+  "date": "2020-11-05",
+  "mentor_id": 102
+}
+
+
+
+Collection: tasks
+Description: Stores assignments given to students.
+
+Data:
+
+{
+  "task": "HTML Task",
+  "topic": "HTML",
+  "date": "2020-10-10",
+  "user_id": 1,
+  "submitted": true
+}
+
+{
+  "task": "CSS Task",
+  "topic": "CSS",
+  "date": "2020-10-15",
+  "user_id": 2,
+  "submitted": false
+}
+
+{
+  "task": "JS Task",
+  "topic": "JavaScript",
+  "date": "2020-10-20",
+  "user_id": 3,
+  "submitted": true
+}
+
+{
+  "task": "MongoDB Task",
+  "topic": "MongoDB",
+  "date": "2020-11-05",
+  "user_id": 4,
+  "submitted": false
+}
+
+
+
+Collection: attendance
+Description: Stores daily attendance of students.
+
+Data:
+
+{
+  "user_id": 1,
+  "date": "2020-10-16",
+  "status": "present"
+}
+
+{
+  "user_id": 2,
+  "date": "2020-10-16",
+  "status": "absent"
+}
+
+{
+  "user_id": 3,
+  "date": "2020-10-20",
+  "status": "absent"
+}
+
+{
+  "user_id": 4,
+  "date": "2020-10-20",
+  "status": "present"
+}
+
+
+
+Collection: codekata
+Description: Stores the number of problems solved by users.
+
+Data:
+
+{
+  "user_id": 1,
+  "problems_solved": 120
+}
+
+{
+  "user_id": 2,
+  "problems_solved": 80
+}
+
+{
+  "user_id": 3,
+  "problems_solved": 150
+}
+
+{
+  "user_id": 4,
+  "problems_solved": 60
+}
+
+
+
+Collection: company_drives
+Description: Stores company placement drive details.
+
+Data:
+
+{
+  "company": "TCS",
+  "date": "2020-10-18",
+  "students": [1, 2]
+}
+
+{
+  "company": "Infosys",
+  "date": "2020-10-30",
+  "students": [3]
+}
+
+{
+  "company": "Wipro",
+  "date": "2020-11-10",
+  "students": [4]
+}
